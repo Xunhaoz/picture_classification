@@ -1,0 +1,19 @@
+* {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.container {
+  width: 80%;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 12vw;
+  object-fit: cover;
+}
