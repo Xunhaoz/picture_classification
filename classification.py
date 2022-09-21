@@ -76,10 +76,10 @@ def upload_file():
         allowed_format = ['png', 'jpg', 'jpeg']
         
         if img.format.lower() not in allowed_format:
-            return jsonify({'status': 'fail', 'reason': 'file format is not allow'})
+            return jsonify({'status': 'fail', 'reason': '照片格式錯誤'})
 
         if h <224 or w <224:
-            return jsonify({'status': 'fail', 'reason': 'please upload higher resolution image'})
+            return jsonify({'status': 'fail', 'reason': '請上傳解析度較大之照片'})
 
         rgb_img = img.convert("RGB")
         pre_result = make_predict(rgb_img)
@@ -91,4 +91,4 @@ def upload_file():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=5000)
